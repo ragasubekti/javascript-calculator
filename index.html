@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JavaScript Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://bootswatch.com/4/litera/bootstrap.min.css"
+    />
+  </head>
+  <body style="height: 100vh">
+    <div
+      class="d-flex justify-content-center align-items-center flex-column"
+      style="height: 100vh"
+    >
+      <div class="row m-1">
+        <div class="col">
+          <span id="result" class="display-4">0</span>
+          <span id="operator"></span>
+        </div>
+      </div>
+      <div class="row m-1">
+        <div class="col">
+          <button class="btn btn-primary btn-lg" onclick="onNumberPressed(7)">
+            7
+          </button>
+          <button class="btn btn-primary btn-lg" onclick="onNumberPressed(8)">
+            8
+          </button>
+          <button class="btn btn-primary btn-lg" onclick="onNumberPressed(9)">
+            9
+          </button>
+          <button
+            class="btn btn-primary btn-lg"
+            onclick="onOperandPressed('divide')"
+          >
+            ÷
+          </button>
+        </div>
+      </div>
+      <div class="row m-1">
+        <div class="col">
+          <button class="btn btn-primary btn-lg" onclick="onNumberPressed(4)">
+            4
+          </button>
+          <button class="btn btn-primary btn-lg" onclick="onNumberPressed(5)">
+            5
+          </button>
+          <button class="btn btn-primary btn-lg" onclick="onNumberPressed(6)">
+            6
+          </button>
+          <button
+            class="btn btn-primary btn-lg"
+            onclick="onOperandPressed('multiply')"
+          >
+            x
+          </button>
+        </div>
+      </div>
+      <div class="row m-1">
+        <div class="col">
+          <button class="btn btn-primary btn-lg" onclick="onNumberPressed(1)">
+            1
+          </button>
+          <button class="btn btn-primary btn-lg" onclick="onNumberPressed(2)">
+            2
+          </button>
+          <button class="btn btn-primary btn-lg" onclick="onNumberPressed(3)">
+            3
+          </button>
+          <button
+            class="btn btn-primary btn-lg"
+            onclick="onOperandPressed('add')"
+          >
+            +
+          </button>
+        </div>
+      </div>
+      <div class="row m-1">
+        <div class="col">
+          <button class="btn btn-danger btn-lg" onclick="allClear()">AC</button>
+          <button class="btn btn-primary btn-lg" onclick="onNumberPressed(0)">
+            0
+          </button>
+          <button class="btn btn-primary btn-lg" onclick="onEqualPressed()">
+            =
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/index.js"></script>
+</html>
