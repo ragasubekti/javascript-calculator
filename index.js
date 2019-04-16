@@ -8,25 +8,9 @@ const onNumberPressed = num => {
 };
 
 const onOperandPressed = type => {
-  const element = document.querySelector("#operator");
   secondNumber = number;
   number = "";
-
   operator = type;
-
-  switch (type) {
-    case "multiply":
-      element.innerHTML = "*";
-      break;
-    case "divide":
-      element.innerHTML = "÷";
-      break;
-    case "add":
-      element.innerHTML = "+";
-      break;
-    default:
-      return (element.innerHTML = "");
-  }
 };
 
 const onEqualPressed = () => {
@@ -44,14 +28,14 @@ const onEqualPressed = () => {
       break;
     case "divide":
       total = firstNumber / secNumber;
-
       break;
     case "add":
       total = firstNumber + secNumber;
-      // element.innerHTML = "+";
+      break;
+    case "subtract":
+      total = firstNumber - secNumber;
       break;
     default:
-    // return (element.innerHTML = "");
   }
 
   result.innerHTML = total;
