@@ -20,7 +20,7 @@ const onNumberPressed = (num: number) => {
 
 const onOperandPressed = (operator: string) => {
   // const element = document.querySelector("#result");
-  onOperatorPressedCount();
+  // onOperatorPressedCount();
 
   // Switch First Digit to Second Digit
   calc.secondDigit = calc.firstDigit;

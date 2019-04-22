@@ -17,7 +17,7 @@ var onNumberPressed = function (num) {
 };
 var onOperandPressed = function (operator) {
     // const element = document.querySelector("#result");
-    onOperatorPressedCount();
+    // onOperatorPressedCount();
     // Switch First Digit to Second Digit
     calc.secondDigit = calc.firstDigit;
     // Reset First Digit to Empty String
