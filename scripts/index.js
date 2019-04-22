@@ -17,6 +17,7 @@ var onNumberPressed = function (num) {
 };
 var onOperandPressed = function (operator) {
     // const element = document.querySelector("#result");
+    onOperatorPressedCount();
     // Switch First Digit to Second Digit
     calc.secondDigit = calc.firstDigit;
     // Reset First Digit to Empty String
@@ -44,6 +45,30 @@ var onEqualPressed = function () {
     }
     if (element != null) {
         element.innerHTML = calc.total.toString();
+    }
+};
+var onOperatorPressedCount = function () {
+    if (calc.secondDigit != "") {
+        var element = document.querySelector("#result");
+        var firstDigit = parseInt(calc.firstDigit);
+        var secondDigit = parseInt(calc.secondDigit);
+        switch (calc.operator) {
+            case "multiply":
+                calc.firstDigit = (secondDigit * firstDigit).toString();
+                break;
+            case "divide":
+                calc.firstDigit = (secondDigit / firstDigit).toString();
+                break;
+            case "add":
+                calc.firstDigit = (secondDigit + firstDigit).toString();
+                break;
+            case "subtract":
+                calc.firstDigit = (secondDigit - firstDigit).toString();
+                break;
+        }
+        if (element != null) {
+            element.innerHTML = calc.firstDigit;
+        }
     }
 };
 var allClear = function () {

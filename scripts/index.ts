@@ -20,6 +20,7 @@ const onNumberPressed = (num: number) => {
 
 const onOperandPressed = (operator: string) => {
   // const element = document.querySelector("#result");
+  onOperatorPressedCount();
 
   // Switch First Digit to Second Digit
   calc.secondDigit = calc.firstDigit;
@@ -53,6 +54,34 @@ const onEqualPressed = () => {
 
   if (element != null) {
     element.innerHTML = calc.total.toString();
+  }
+};
+
+const onOperatorPressedCount = () => {
+  if (calc.secondDigit != "") {
+    const element = document.querySelector("#result");
+
+    const firstDigit = parseInt(calc.firstDigit);
+    const secondDigit = parseInt(calc.secondDigit);
+
+    switch (calc.operator) {
+      case "multiply":
+        calc.firstDigit = (secondDigit * firstDigit).toString();
+        break;
+      case "divide":
+        calc.firstDigit = (secondDigit / firstDigit).toString();
+        break;
+      case "add":
+        calc.firstDigit = (secondDigit + firstDigit).toString();
+        break;
+      case "subtract":
+        calc.firstDigit = (secondDigit - firstDigit).toString();
+        break;
+    }
+
+    if (element != null) {
+      element.innerHTML = calc.firstDigit;
+    }
   }
 };
 
