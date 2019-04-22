@@ -27,6 +27,8 @@ var onOperandPressed = function (operator) {
 };
 var onEqualPressed = function () {
     var element = document.querySelector("#result");
+    // Set Total to FirstDigit so when user pressed operator, the operation will continue
+    calc.firstDigit = calc.total.toString();
     var firstDigit = parseInt(calc.firstDigit);
     var secondDigit = parseInt(calc.secondDigit);
     switch (calc.operator) {

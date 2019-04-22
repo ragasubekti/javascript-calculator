@@ -34,6 +34,9 @@ const onOperandPressed = (operator: string) => {
 const onEqualPressed = () => {
   const element = document.querySelector("#result");
 
+  // Set Total to FirstDigit so when user pressed operator, the operation will continue
+  calc.firstDigit = calc.total.toString();
+
   const firstDigit = parseInt(calc.firstDigit);
   const secondDigit = parseInt(calc.secondDigit);
 
